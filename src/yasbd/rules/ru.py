@@ -23,6 +23,7 @@ class RuRules(Rules):
         # Others
         "г-н", "г-жа", "госп", "тов", "св", "бл",
         "о", "оо",
+        "им", "ст. м",
     }
 
     # English geopolitical abbreviations (USA, UK, NATO, etc.) may appear in
@@ -35,6 +36,7 @@ class RuRules(Rules):
         "п", "пп", "ст", "табл", "рис", "прим", "прил", "напр", "вып", "т.к",
         "и.о", "ч", "изд", "собр", "соч", "т", "тт", "автореф", "анот",
         "реф", "рец", "и др", "и пр", "и т.п", "в т.ч",
+        "ул", "д", "им", "ст", "г",
     }
 
     SECTION_MARKERS = Rules.SECTION_MARKERS | {
