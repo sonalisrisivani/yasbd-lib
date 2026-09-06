@@ -193,7 +193,7 @@ class Rules:
     TOC_LEADER_FINDER = re.compile(r".\s*\.[\s\.]{3,}\d")
 
     # https://regex101.com/r/ZOZlLb/3/substitution
-    NEWLINE_INSIDE_SENTENCE_FINDER = re2.compile(r"(?<=[,:;)\w\s])\n(?=([a-z(>]))")
+    NEWLINE_INSIDE_SENTENCE_FINDER = re2.compile(r"(?<=[,:;)\w\s])\n(?=(\p{Ll}|[(>]))")
 
     _REGEX_CACHED = False
     # fmt: on
