@@ -233,7 +233,7 @@ def test_universal_regression(en_detector, marked_text):
 
 
 def test_cyrillic_newline_inside_sentence():
-    """Cyrillic lowercase after a newline is sentence-internal (fix for #274)."""
+    """Test that Cyrillic lowercase after a newline is sentence-internal (fix for #274)."""
     detector = BoundaryDetector(lang="ru")
     result = list(detector.segment("Это\nслово продолжается."))
     assert len(result) == 1
