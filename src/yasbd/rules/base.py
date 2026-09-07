@@ -450,6 +450,7 @@ class Rules:
         }
 
         # -- Remove false alarms --
+        self._adjust_list_boundaries(sentence_boundaries, text)
         sentence_boundaries.difference_update(
             m.end() for pat in self.MID_SENTENCE_FINDER_LST
             for m in pat.finditer(text)
@@ -459,7 +460,6 @@ class Rules:
             sentence_boundaries, text, preserve_quote_and_paren
         )
         self._remove_toc_spans(sentence_boundaries, text)
-        self._adjust_list_boundaries(sentence_boundaries, text)
 
         sentence_boundaries.update({0, len(text)})
         return sorted(sentence_boundaries)

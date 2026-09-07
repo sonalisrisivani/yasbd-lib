@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- **Russian abbreviation coverage** ([#278](https://github.com/speedyk-005/yasbd-lib/pull/278)): Expanded `TITLE_ABBRVS`, `REFERENCE_ABBRVS`, and `INLINE_ONLY_ABBRVS` with missing Russian abbreviations, and added Cyrillic initial-chain handling to `MID_SENTENCE_FINDER_LST` to prevent false splits (e.g., `Арх. Иванов` and `Проф. Петров А.К.`).
+- **List boundary ordering** ([#277](https://github.com/speedyk-005/yasbd-lib/pull/277)): Run list boundary adjustment before mid-sentence filtering to prevent re-adding boundaries suppressed by abbreviation handling (e.g., `И т. д.` no longer splits).
+
+---
+
 ## [0.16.2] - 2026-09-02
 
 ### Changed

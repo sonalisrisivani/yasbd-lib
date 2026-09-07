@@ -29,25 +29,26 @@
   - [✂ Why do I need a pair of "smart scissors" for text?](#-why-do-i-need-a-pair-of-smart-scissors-for-text)
   - [🔪 Are these shears just a rusty regex loop spray-painted in carbon fiber?](#-are-these-shears-just-a-rusty-regex-loop-spray-painted-in-carbon-fiber)
 - [💡 Use Cases](#-use-cases)
-- [🌐 Supported Languages](#-supported-languages)
+- [🌐 Supported Languages](#-supported-languages-api)
   - [How Language Profiles Are Built](#how-language-profiles-are-built)
 - [📊 Benchmarks](#-benchmarks)
 - [📥 Installation](#-installation)
   - [The Quick & Easy Way](#the-quick--easy-way)
   - [The From-Source Way](#the-from-source-way)
   - [Want to Help Make yasbd Even Better?](#want-to-help-make-yasbd-even-better)
-- [📟 Usage](#-usage)
+- [📟 Usage](#-usage-api)
   - [Initialization](#initialization)
   - [Core Methods](#core-methods)
     - [Boundary detection](#boundary-detection)
     - [Segmentation](#segmentation)
-  - [Cleaner](#cleaner)
-  - [CLI](#cli)
+  - [Cleaner](#cleaner-api)
+  - [CLI](#cli-api)
     - [About JSONL](#about-jsonl)
-  - [Adapter](#adapter)
-  - [spaCy component](#spacy-component)
-- [​🔗 Integrations & Ecosystem](#-integrations--ecosystem)
-- [📦 Lang Packs](#-lang-packs)
+  - [Adapter](#adapter-api)
+  - [spaCy component](#spacy-component-api)
+- [📦 Lang Packs](#-lang-packs-api)
+  - [Official Lang Packs](#official-lang-packs)
+- [🔗 Integrations & Ecosystem](#-integrations--ecosystem)
 - [🤝 Contributors](#-contributors)
 - [📜 Last note](#-last-note)
 
@@ -231,7 +232,7 @@ That's awesome. See [**Contributing Guide**](https://github.com/speedyk-005/yasb
 ## 📟 Usage ([API](https://github.com/speedyk-005/yasbd-lib/blob/main/API_REFERENCES.md#yasbdboundary_detector))
 
 > [!TIP]
-> Not a Pythonista? Jump straight to the [CLI](#cli) section.
+> Not a Pythonista? Jump straight to the [CLI](#cli-api) section.
 >
 > Looking for the pysbd drop-in replacement? Jump straight to the [Adapter](#adapter) section.
 
@@ -246,9 +247,9 @@ detector = BoundaryDetector(lang="en")
 
 # With all options (so far.)
 detector = BoundaryDetector(
-	# ISO 639 code (e.g., en, fr, es, ...). Required.
-	# Use "auto" for automatic detection.
-	# https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
+    # ISO 639 code (e.g., en, fr, es, ...). Required.
+    # Use "auto" for automatic detection.
+    # https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
     lang="fr",
 
     # Optional external language pack modules to load. Defaults to `None`.
