@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- **Unicode newline-inside-sentence detection** ([#276](https://github.com/speedyk-005/yasbd-lib/pull/276)): `NEWLINE_INSIDE_SENTENCE_FINDER` now uses the Unicode lowercase property `\p{Ll}` instead of ASCII-only `[a-z]`, so newlines before Cyrillic and other non-ASCII lowercase letters are no longer treated as sentence boundaries.
 - **Russian abbreviation coverage** ([#278](https://github.com/speedyk-005/yasbd-lib/pull/278)): Expanded `TITLE_ABBRVS`, `REFERENCE_ABBRVS`, and `INLINE_ONLY_ABBRVS` with missing Russian abbreviations, and added Cyrillic initial-chain handling to `MID_SENTENCE_FINDER_LST` to prevent false splits (e.g., `Арх. Иванов` and `Проф. Петров А.К.`).
 - **List boundary ordering** ([#277](https://github.com/speedyk-005/yasbd-lib/pull/277)): Run list boundary adjustment before mid-sentence filtering to prevent re-adding boundaries suppressed by abbreviation handling (e.g., `И т. д.` no longer splits).
 
